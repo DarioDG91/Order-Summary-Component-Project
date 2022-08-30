@@ -1,0 +1,187 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $PaleBlue;
+
+  .BG-color {
+    background-image: url("/images/pattern-background-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    background-color: $White;
+    width: 87%;
+    max-width: 28.1rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 20px 20px 3px #c6d2f8;
+
+
+    .image {
+      background-image: url("/images/illustration-hero.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      height: 10rem;
+      @include md {
+        height: 13.75rem;
+      }
+    }
+
+    .text {
+      margin: 2rem 1.5rem ;
+      text-align: center;
+
+      @include md {
+       margin: 2.85rem 3rem;
+      }
+
+      .title {
+        color: $DarkBlue;
+        font-size: 1.38rem;
+        font-weight: 900;
+
+        @include md {
+          font-size: 1.75rem;
+          // margin-top: 2.85rem;
+        }
+
+      }
+
+      .description {
+        color: $DesaturatedBlue;
+        margin-top: 1.1rem;
+        font-size: 0.941rem;
+        line-height: 1.6;
+        padding: 0 0.8rem;
+        margin-bottom: 1rem;
+
+        @include md {
+          font-size: 1rem;
+          margin-top: 1rem;
+          margin-bottom: 1.3rem;
+
+
+        }
+
+        
+      }
+      .subscription {
+        background-color: $VeryPaleBlue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.90rem 1rem 0.90rem 1rem;
+        border-radius: 1rem;
+
+        @include md {
+          padding: 1.65rem 1.6rem 1.2rem 1.5rem        }
+
+        .plan-box-left {
+            display: flex;
+            flex-direction: row;
+            gap: 1.1rem;
+            align-items: center;
+
+        
+    
+            .membership {
+                text-align: left;
+                font-size: 0.9rem;
+                line-height: 1.5;
+
+                @include md {
+                  font-size: 1rem;
+
+                }
+              .plan {
+                color: $DarkBlue;
+                font-weight: 900;
+              }
+    
+              .price {
+                color: $DesaturatedBlue;
+              }
+            }
+        }
+
+
+
+        .link {
+            text-align: right;
+            font-weight: 900;
+            font-size: 0.8rem;
+
+            @include md {
+              font-size: 0.9rem;
+            }
+            a{
+                color: $BrightBlue;
+                transition: 300ms ease-in-out;
+
+                &:hover{
+                  text-decoration: none;
+                  opacity: 0.7;
+
+                }
+            }
+        }
+      }
+
+      .pay-btn {
+        color: $White;
+        background-color: $BrightBlue;
+        padding: 0.95rem 0;
+        font-size: 0.97rem;
+        font-weight: 700;
+        border-radius: 0.8rem;
+        margin-top: 1.5rem;
+        box-shadow: 0px 15px 17px 19px $PaleBlue ;
+        transition: 300ms ease-in-out;
+        &:hover{
+          cursor: pointer;
+          opacity: 0.7;
+        }
+
+        @include md {
+          margin-top: 1.9rem;
+        }
+
+      }
+
+      .cancel-btn {
+        color: $DesaturatedBlue;
+        font-size: 0.97rem;
+        font-weight: 700;
+        margin-top: 1.3rem;
+        display: inline-block;
+        transition: 300ms ease-in-out;
+
+        &:hover{
+          cursor: pointer;
+          color: black;
+          font-size: 1rem;
+          font-weight: 900;
+        }
+
+
+        @include md {
+          margin-top: 2rem;
+        }
+
+
+      }
+    }
+  }
+}
